@@ -11,3 +11,5 @@ Features:
 - C-x C-s in ymacs will transfer text back to your atom buffers.
 - Opening a new file in atom will open it in ymacs too if ymacs is open.
 - Killing a buffer in ymacs will release the edit object in atom.
+
+![ymacs screenshot in atom](./ymacs-screen.png)
