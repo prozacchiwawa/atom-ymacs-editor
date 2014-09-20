@@ -7,7 +7,7 @@
                     "label": "Ymacs",
                     "submenu": [
                         {
-                            "label": "Toggle",
+                            "label": "Create",
                             "command": "ymacs-editor:create"
                         }
                     ]
