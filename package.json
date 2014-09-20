@@ -1,0 +1,25 @@
+{
+  "name": "ymacs-editor",
+  "main": "./lib/ymacs-editor",
+  "version": "0.1.0",
+  "description": "A simple host for the ymacs editor pane in atom",
+  "activationEvents": [
+    "ymacs-editor:create"
+  ],
+  "repository": "https://github.com/prozacchiwawa/ymacs-editor",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "napa": "~0.4.1",
+    "atom-pane": "~1.0.1"
+  },
+  "stylesheets": [
+    "ymacs-editor.less"
+  ],
+  "scripts": {
+    "install": "napa https://github.com/mishoo/ymacs.git:ymacs"
+  }
+}

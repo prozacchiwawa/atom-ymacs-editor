@@ -1,0 +1,18 @@
+{ 
+    "menu": [ 
+        { 
+            "label": "Packages",
+            "submenu": [
+                {
+                    "label": "Ymacs",
+                    "submenu": [
+                        {
+                            "label": "Toggle",
+                            "command": "ymacs-editor:create"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
