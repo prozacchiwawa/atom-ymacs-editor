@@ -61,7 +61,7 @@ $(document).ready(function() {
 
         console.log("ymacs-iframe:message", message);
         var type = message.type;
-        if (message.type === "new-buffer") {
+        if (message.type === "new-buffer" && message.file) {
             var code = message.text;
             var buf = ymacs.getBuffer(message.file) || ymacs.createBuffer({name:message.file});
             buf.COMMANDS.kill_buffer = Ymacs_Interactive(function() {
