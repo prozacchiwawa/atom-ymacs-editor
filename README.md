@@ -12,4 +12,4 @@ Features:
 - Opening a new file in atom will open it in ymacs too if ymacs is open.
 - Killing a buffer in ymacs will release the edit object in atom.
 
-![ymacs screenshot in atom](./ymacs-screen.png)
+![ymacs screenshot in atom](https://raw.githubusercontent.com/prozacchiwawa/atom-ymacs-editor/master/ymacs-screen.png)
