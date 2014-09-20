@@ -1,5 +1,7 @@
 /*
 
+ Original author's note;
+
   Note that this file is just an example.  It should not be treated as
   part of Ymacs itself.  Ymacs is just an editing platform and as such
   it has no menus, no toolbar etc.  These can be easily added using
@@ -7,6 +9,13 @@
 
   If a collection of useful menus/toolbars will emerge, a new compound
   widget will be defined.
+
+ -- This test has been pared down and adapted to host ymacs in atom
+ (or more generally, anything that can receive events as the parent
+ window).  For other ymacs users, the below code is a fairly robust
+ example of how to embed ymacs in only part of the DOM.  It will take
+ the size of the div that parents the desktop element, although that
+ capability isn't used here, as we're in an iframe anyway.
 
 */
 
@@ -16,7 +25,7 @@ var messageData;
 function save_buffer() {
     var text = this.code.join("\n");
     window.parent.postMessage(
-        {type: "save", 
+        {type: "save",
          file: this.name,
          text: text}, "file://");
 };
@@ -25,24 +34,24 @@ $(document).ready(function() {
     Ymacs_Buffer.newCommands({
         save_buffer: Ymacs_Interactive(save_buffer)
     });
-    
+
     var desktop = new DlDesktop({});
     var desktopElement = desktop.getElement();
     desktopElement.parentNode.removeChild(desktopElement);
     document.getElementById('ymacs-in-a-div').appendChild(desktopElement);
     desktop.fullScreen();
     desktopElement.id = "ymacs-desktop";
-    
+
     var layout = new DlLayout({ parent: desktop });
 
     var empty = new Ymacs_Buffer({ name: "empty" });
     var ymacs = window.ymacs = new Ymacs({ buffers: [ empty ]});
     ymacs.setColorTheme([ "dark", "y" ]);
-    
+
     try {
         ymacs.getActiveBuffer().cmd("eval_file", ".ymacs");
     } catch(ex) {}
-    
+
     messageHandler = function(event) {
         var message;
         if (event)
@@ -62,7 +71,7 @@ $(document).ready(function() {
                 window.parent.postMessage({type: "killed", file:message.file}, "file://");
             });
             buf.setCode(code);
-            
+
             // XXX arty set mode by file type
             if (message.file.endsWith('.js'))
                 buf.cmd("javascript_mode");
