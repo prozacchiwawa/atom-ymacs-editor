@@ -6,7 +6,7 @@
   "activationEvents": [
     "ymacs-editor:create"
   ],
-  "repository": "https://github.com/prozacchiwawa/ymacs-editor",
+  "repository": "https://github.com/prozacchiwawa/atom-ymacs-editor",
   "license": "MIT",
   "engines": {
     "atom": ">0.126.0"
