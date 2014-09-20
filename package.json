@@ -1,7 +1,7 @@
 {
   "name": "ymacs-editor",
   "main": "./lib/ymacs-editor",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple host for the ymacs editor pane in atom",
   "activationEvents": [
     "ymacs-editor:create"
