@@ -21,6 +21,8 @@
 
 var messageHandler;
 var messageData;
+var $ = $ || module.exports; // Since module is defined now, jquery exports
+// onto it.
 
 function save_buffer() {
     var text = this.code.join("\n");
