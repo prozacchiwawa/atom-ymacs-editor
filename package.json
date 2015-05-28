@@ -16,7 +16,7 @@
   "dependencies": {
     "jquery": "~2.1.1",
     "napa": "~0.4.1",
-    "atom-pane": "git+https://github.com/prozacchiwawa/atom-pane#20150527-atom-pane-api-update"
+    "atom-pane": "prozacchiwawa/atom-pane#20150527-atom-pane-api-update"
   },
   "styleSheets": [
     "ymacs-editor.less"
