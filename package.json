@@ -3,9 +3,9 @@
   "main": "./lib/ymacs-editor",
   "version": "1.0.4",
   "description": "A simple host for the ymacs editor pane in atom",
-  "activationEvents": [
-    "ymacs-editor:create"
-  ],
+  "activationCommands": {
+    "atom-workspace": ["ymacs-editor:create"]
+  },
   "repository": "https://github.com/prozacchiwawa/atom-ymacs-editor",
   "license": "MIT",
   "engines": {
@@ -16,7 +16,7 @@
     "napa": "~0.4.1",
     "atom-pane": "~1.0.1"
   },
-  "stylesheets": [
+  "styleSheets": [
     "ymacs-editor.less"
   ],
   "scripts": {

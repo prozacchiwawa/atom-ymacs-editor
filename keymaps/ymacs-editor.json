@@ -1,5 +1,5 @@
 {
-    ".workspace": {
+    "atom-workspace": {
         "ctrl-alt-y": "ymacs-editor:create"
     }
 }
