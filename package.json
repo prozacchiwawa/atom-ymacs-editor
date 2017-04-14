@@ -1,7 +1,7 @@
 {
   "name": "ymacs-editor",
   "main": "./lib/ymacs-editor",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A simple host for the ymacs editor pane in atom",
   "activationCommands": {
     "atom-workspace": [
