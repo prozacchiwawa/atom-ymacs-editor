@@ -14,7 +14,7 @@
     "atom": ">0.126.0"
   },
   "dependencies": {
-    "jquery": "~2.1.1",
+    "jquery": "~3.0.0",
     "napa": "~0.4.1",
     "atom-pane": "https://github.com/prozacchiwawa/atom-pane/archive/20150527-atom-pane-api-update.tar.gz"
   },
